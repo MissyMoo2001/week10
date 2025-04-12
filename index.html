@@ -4,8 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <!--added style to change font of entire page-->
+    <style> 
+        .gfg {
+            font-family: "Times, serif";
+        }
+    </style>
 </head>
-<body>
+
+<body class="gfg conatiner-fluid" style="background: #3bdeff;" >
+    <nav class="navbar bg-body-info">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><!--href blank due no other pages existing-->
+            <img src="https://tse3.mm.bing.net/th?id=OIP.XWzJgi2_CGpg_V-HAnOOggHaHa&pid=Api&P=0&h=180" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+            My Reading List
+          </a>
+        </div>
+      </nav>
+    <div class="card conatiner-fluid"><!--main card containing form-->
+        <div class="card-body bg-info-subtle">
+            <div class="row">
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label for="new-task">Book Title</label>
+                        <input type="text" class="form-control" id="new-task" placeholder="Book Title">
+                    </div><br>
+                </div>
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label for="new-task">Author</label>
+                        <input type="text" class="form-control" id="new-task2" placeholder="Author Name">
+                    </div><br>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label for="new-start-date">Start Date</label>
+                        <input type="date" class="form-control" id="new-start-date">
+                    </div><br>
+                </div>
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label for="new-end-date">Finish Date</label>
+                        <input type="date" class="form-control" id="new-end-date">
+                    </div><br>
+                </div>
+            </div>
+            <div>
+                <button id="add" class="btn btn-info form-control">Add Book</button>
+            </div>
+        </div>
+    </div>
+    <div class="conatiner" style="padding: 5px;"><!--second container for table-->
+        <table id="list" class="table table-tertiary table-striped">
+            <tr>
+                <th>Book Title</th>
+                <th>Author</th>
+                <th>Start Date</th>
+                <th>Finish Date</th>
+                <th>Action</th>
+            </tr>
+        </table>
+    </div>
+    <div class="conatiner-fluid text-center"><!--image for added asthetic-->
+        <img src="https://media.istockphoto.com/photos/opened-book-against-stack-of-books-isolated-on-blue-background-picture-id165782498?k=6&m=165782498&s=612x612&w=0&h=zr5u2aFhPM_MdqWpd5mM__sUsM7BVN8FlryYXMW82d4=" width="400px">
+    </div>
+    <script src="user_input.js"></script>
     
 </body>
 </html>
